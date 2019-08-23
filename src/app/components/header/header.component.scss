@@ -1,0 +1,22 @@
+.header-logo {
+    background: #EC7404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        padding: 20px;
+    }
+}
+
+.tab-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .tab-container {
+        width: 90%;
+    }
+  }

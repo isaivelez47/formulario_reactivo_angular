@@ -1,0 +1,114 @@
+<div class="form-container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Simula tu Crédito</mat-card-title>
+      <mat-card-subtitle>Calcula el valor de tu cuota o el monto que puedes solicitar de acuerdo
+        con tus necesidades de crédito y capacidad de pago.</mat-card-subtitle>
+    </mat-card-header>
+    <form [formGroup]="simulacionForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+
+        <mat-form-field color="primary">
+          <mat-label>
+            ¿Qué deseas simular?
+          </mat-label>
+          <mat-select formControlName="tipoSimulacion" (blur)="recorrerFormularioYSetearMensajesDeError()">
+            <mat-option *ngFor="let tipo of tiposSimulacion" [value]="tipo.value">
+              {{ tipo.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p *ngIf="simulacionForm.controls.tipoSimulacion.dirty">
+          <span *ngFor="let mensaje of mensajesTipoSimulacion">
+            <span *ngIf="mensaje.value === simulacionForm.controls.tipoSimulacion.value" class="mensaje-input">
+              {{ mensaje.viewValue }}
+            </span>
+          </span>
+        </p>
+        <mat-error *ngIf="formErrors.tipoSimulacion">
+          {{ formErrors.tipoSimulacion }}
+        </mat-error>
+
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Ingresa tu fecha de nacimiento"
+            formControlName="fechaNacimiento" (blur)="recorrerFormularioYSetearMensajesDeError()" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-error *ngIf="formErrors.fechaNacimiento">
+          {{ formErrors.fechaNacimiento }}
+        </mat-error>
+        <mat-form-field color="primary">
+          <mat-label>¿Con qué tipo de tasa quieres tu préstamo?</mat-label>
+          <mat-select formControlName="tipoTasa" (blur)="recorrerFormularioYSetearMensajesDeError()" id="tipoTasa">
+            <mat-option *ngFor="let tipot of tiposTasa" [value]="tipot.value">
+              {{ tipot.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-error *ngIf="formErrors.tipoTasa">
+          {{ formErrors.tipoTasa }}
+        </mat-error>
+        <div class="hide-container"
+          *ngIf="simulacionForm.get('tipoSimulacion').valid && simulacionForm.get('fechaNacimiento').valid && simulacionForm.get('tipoTasa').valid">
+          <mat-form-field color="primary">
+            <mat-label>¿Cuál es el producto de crédito que deseas adquirir?</mat-label>
+            <mat-select formControlName="producto" (blur)="recorrerFormularioYSetearMensajesDeError()">
+              <mat-option *ngFor="let producto of productos" [value]="producto.value">
+                {{ producto.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <span *ngIf="formErrors.producto" class="mensaje-error-input">
+            {{ formErrors.producto }}
+          </span>
+          <div class="hide-container" *ngIf="simulacionForm.get('producto').valid">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Ingresos mensuales mínimos necesarios de ($)" disabled
+                [value]="simulacionForm.controls.ingresosMinimos.value  | currency:'USD':'$'">
+            </mat-form-field>
+            <div class="check-box"
+              *ngIf="simulacionForm.get('tipoTasa').value === 'tasa fija' && (simulacionForm.get('producto').value === 'crédito de libre inversion' || simulacionForm.get('producto').value === 'libranza empleados')">
+              <mat-checkbox class="tp-margin" formControlName="seguroDesempleo" color="primary">
+                ¿Quieres seguro de desempleo?
+              </mat-checkbox>
+            </div>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="¿Cuál es el plazo que necesitas para tu préstamo? (meses)"
+                formControlName="plazo" (blur)="recorrerFormularioYSetearMensajesDeError()">
+            </mat-form-field>
+            <mat-error *ngIf="formErrors.plazo">
+              {{ formErrors.plazo }}
+            </mat-error>
+            <div class="custom-form-group" *ngIf="simulacionForm.get('tipoSimulacion').value === 'simula tu cuota'">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="¿Cuánto es el valor que deseas prestar? ($)"
+                  formControlName="valorAPrestar" (blur)="recorrerFormularioYSetearMensajesDeError()"
+                  [value]="simulacionForm.controls.valorAPrestar.value  | currency:'USD':'$'">
+              </mat-form-field>
+              <mat-error *ngIf="formErrors.valorAPrestar">
+                {{ formErrors.valorAPrestar }}
+              </mat-error>
+            </div>
+            <div class="custom-form-group" *ngIf="simulacionForm.get('tipoSimulacion').value === 'simula tu monto'">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="¿Cuánto deseas pagar cada mes? ($)" formControlName="valorAPagar"
+                  (blur)="recorrerFormularioYSetearMensajesDeError()"
+                  [value]="simulacionForm.controls.valorAPagar.value  | currency:'USD':'$'">
+              </mat-form-field>
+              <mat-error *ngIf="formErrors.valorAPagar">
+                {{ formErrors.valorAPagar }}
+              </mat-error>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button type="submit" color="primary" [disabled]="simulacionForm.invalid">Simular</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+
+</div>

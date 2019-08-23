@@ -1,0 +1,88 @@
+<mat-card>
+  <mat-spinner color="primary" *ngIf="!datosCargadosDelBack"></mat-spinner>
+  <div class="mat-elevation-z8"  *ngIf="datosCargadosDelBack">
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="cuotaNumero">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let element"> {{element.cuotaNumero}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="abonoInteres">
+        <th mat-header-cell *matHeaderCellDef> Abono intereses </th>
+        <td mat-cell *matCellDef="let element"> {{element.abonoInteres | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="abonoCapital">
+        <th mat-header-cell *matHeaderCellDef> Abono capital </th>
+        <td mat-cell *matCellDef="let element"> {{element.abonoCapital | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cuota">
+        <th mat-header-cell *matHeaderCellDef> Cuota mensual sin seguros </th>
+        <td mat-cell *matCellDef="let element"> {{element.cuota | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="seguro">
+        <th mat-header-cell *matHeaderCellDef> Seguro de vida la Deuda </th>
+        <td mat-cell *matCellDef="let element"> {{element.seguro | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cuotaSeguro">
+        <th mat-header-cell *matHeaderCellDef> Cuota mensual mas seguros </th>
+        <td mat-cell *matCellDef="let element"> {{element.cuotaSeguro | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="saldo">
+        <th mat-header-cell *matHeaderCellDef> Saldo </th>
+        <td mat-cell *matCellDef="let element"> {{element.saldo | currency:'USD':'$'}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [length]="length" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="cambiarTab()">Cambiar datos</button>
+</mat-card>
+
+
+<!--
+<ng-container matColumnDef="cuotaNumero">
+        <th mat-header-cell *matHeaderCellDef> Cuota </th>
+        <td mat-cell *matCellDef="let cuota"> {{cuota.cuotaNumero}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="abonoInteres">
+        <th mat-header-cell *matHeaderCellDef>Abono a intereses</th>
+        <td mat-cell *matCellDef="let element"> {{element.abonoInteres}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="abonoCapital">
+        <th mat-header-cell *matHeaderCellDef>Abono a capital</th>
+        <td mat-cell *matCellDef="let element"> {{element.abonoCapital}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cuota">
+        <th mat-header-cell *matHeaderCellDef>Cuota mensual sin seguros</th>
+        <td mat-cell *matCellDef="let element"> {{element.cuota}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="seguro">
+        <th mat-header-cell *matHeaderCellDef>Valor del seguro de vida asociado a la Deuda</th>
+        <td mat-cell *matCellDef="let element"> {{element.seguro}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cuotaSeguro">
+        <th mat-header-cell *matHeaderCellDef>Cuota mensual mas seguros</th>
+        <td mat-cell *matCellDef="let element"> {{element.cuotaSeguro}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="saldo">
+        <th mat-header-cell *matHeaderCellDef>Saldo</th>
+        <td mat-cell *matCellDef="let element"> {{element.saldo}} </td>
+      </ng-container>
+
+-->

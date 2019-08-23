@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="header-logo">
+    <img src="./../../../assets/logo.jpg" alt="">
+  </div>
+  <mat-tab-group mat-align-tabs="center" color="primary" [selectedIndex]="tabActivo">
+    <mat-tab label="Formulario" disabled>
+      <div class="tab-container">
+        <app-form (OutPutDelPadre)="cambiarTab($event)"></app-form>
+      </div>
+    </mat-tab>
+    <mat-tab label="Resultado" disabled>
+      <div class="tab-container">
+        <app-results [tabActivo]="tabActivo" (OutPutDelPadre)="cambiarTab($event)"></app-results>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
