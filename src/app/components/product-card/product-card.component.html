@@ -1,0 +1,12 @@
+<div class="product-card">
+  <div class="image-section">
+    <p class="product-title">{{ product.title }}</p>
+    <p class="product-subtitle">{{ product.subtitle }}</p>
+  </div>
+  <div class="info-section">
+    <p class="card-text">
+      {{ product.text }}
+    </p>
+    <app-itau-button [title]="product.buttonText" [routeUrl]="product.routeUrl"></app-itau-button>
+  </div>
+</div>

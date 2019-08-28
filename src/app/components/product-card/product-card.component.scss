@@ -1,0 +1,41 @@
+.product-card {
+  margin: 30px auto;
+  border-radius: 26px;
+
+  .image-section {
+    background: rgb(84, 87, 84);
+    height: 42.5vw;
+    max-height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 26px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+
+    p {
+      color: white;
+    }
+
+    p.product-title {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    p.product-subtitle {
+      font-size: 18px;
+    }
+  }
+
+  .info-section {
+    padding: 26px;
+    background: white;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+
+    p {
+      line-height: 20px;
+      font-size: 18px;
+    }
+  }
+}

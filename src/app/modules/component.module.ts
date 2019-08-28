@@ -20,6 +20,9 @@ import { UdpCurrencyMaskPipe } from '../pipes/UdpCurrencyMaskPipe.pipe';
 // Services
 import { BackServiceService } from '../services/back-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from '../pages/home/home.component';
+import { ProductCardComponent } from '../components/product-card/product-card.component';
+import { ItauButtonComponent } from '../components/itau-button/itau-button.component';
 
 
 
@@ -37,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FormComponent,
     ResultsComponent,
-    UdpCurrencyMaskPipe
+    UdpCurrencyMaskPipe,
+    HomeComponent,
+    ProductCardComponent,
+    ItauButtonComponent
   ],
   providers: [BackServiceService],
   bootstrap: [AppComponent]

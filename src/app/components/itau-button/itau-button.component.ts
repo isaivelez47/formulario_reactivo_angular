@@ -1,0 +1,29 @@
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
+
+@Component({
+  selector: 'app-itau-button',
+  templateUrl: './itau-button.component.html',
+  styleUrls: ['./itau-button.component.scss']
+})
+export class ItauButtonComponent implements OnInit {
+
+  @Input() title;
+  @Input() routeUrl;
+
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+  }
+
+  handleClickRedirect() {
+    console.log(this.routeUrl);
+    this.router.navigate([this.routeUrl]);
+  }
+
+}
