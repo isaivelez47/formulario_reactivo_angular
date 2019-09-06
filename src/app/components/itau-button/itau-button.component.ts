@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-itau-button',
@@ -13,8 +12,6 @@ export class ItauButtonComponent implements OnInit {
   @Input() routeUrl;
 
   constructor(
-    private route: ActivatedRoute,
-    private location: Location,
     private router: Router
   ) { }
 

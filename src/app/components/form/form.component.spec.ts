@@ -10,7 +10,7 @@ import { UdpCurrencyMaskPipe } from 'src/app/pipes/UdpCurrencyMaskPipe.pipe';
 import { CurrencyPipe } from '@angular/common';
 import { BackServiceService } from 'src/app/services/back-service.service';
 
-describe('FormComponent', () => {
+xdescribe('FormComponent', () => {
 
   let component: FormComponent;
   let errores: any;

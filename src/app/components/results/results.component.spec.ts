@@ -16,7 +16,7 @@ import {
 } from '@angular/http/testing';
 
 
-describe('ResultsComponent', () => {
+xdescribe('ResultsComponent', () => {
   /*
     let component: ResultsComponent;
     let fixture: ComponentFixture<ResultsComponent>;

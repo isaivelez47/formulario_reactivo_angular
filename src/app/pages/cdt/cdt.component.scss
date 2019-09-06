@@ -1,0 +1,35 @@
+.home-container {
+  background-color: rgb(250, 248, 247);
+  color: rgb(20, 17, 15);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 0 auto;
+
+  .image-section {
+    background: rgb(84, 87, 84);
+    height: 45.3vw;
+    max-height: 271.8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+
+    p {
+      color: white;
+    }
+
+    p.product-title {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: ItauTextRg;
+      line-height: 28px;
+    }
+
+    p.product-subtitle {
+      font-size: 14px;
+      font-family: ItauTextRg;
+      line-height: 16px;
+    }
+  }
+}

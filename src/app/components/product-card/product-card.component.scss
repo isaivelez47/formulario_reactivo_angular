@@ -1,41 +1,48 @@
 .product-card {
-  margin: 30px auto;
-  border-radius: 26px;
+  margin: 24px auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(48, 43, 38, 0.24);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(48, 43, 38, 0.24);
+  box-shadow: 0px 1px 1px 0px rgba(48, 43, 38, 0.24);
 
   .image-section {
     background: rgb(84, 87, 84);
     height: 42.5vw;
     max-height: 255px;
+    min-height: 148px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 26px;
-    border-top-left-radius: 26px;
-    border-top-right-radius: 26px;
+    padding: 17px 18px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 
     p {
       color: white;
     }
 
     p.product-title {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
+      font-family: ItauTextLight;
     }
 
     p.product-subtitle {
-      font-size: 18px;
+      font-size: 14px;
+      font-family: ItauTextLight;
     }
   }
 
   .info-section {
-    padding: 26px;
+    padding: 15.94px;
     background: white;
-    border-bottom-left-radius: 26px;
-    border-bottom-right-radius: 26px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     p {
-      line-height: 20px;
-      font-size: 18px;
+      font-family: ItauDisplayRg;
+      line-height: 24px;
+      font-size: 16px;
     }
   }
 }

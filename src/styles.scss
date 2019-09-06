@@ -6,3 +6,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+  font-family: ItauDisplayXBd;
+  src: url(assets/fonts/display/ItauDisplay_XBd.ttf);
+}
+
+@font-face {
+  font-family: ItauDisplayRg;
+  src: url(assets/fonts/display/ItauDisplay_Rg.ttf);
+}
+
+@font-face {
+  font-family: ItauDisplayLight;
+  src: url(assets/fonts/display/ItauDisplay_Lt.ttf);
+}
+
+@font-face {
+  font-family: ItauDisplayHe;
+  src: url(assets/fonts/display/ItauDisplay_He.ttf);
+}
+
+@font-face {
+  font-family: ItauDisplayBlk;
+  src: url(assets/fonts/display/ItauDisplay_Blk.ttf);
+}
+
+@font-face {
+  font-family: ItauDisplayBold;
+  src: url(assets/fonts/display/ItauDisplay_Bd.ttf);
+}
+
+@font-face {
+  font-family: ItauTextBold;
+  src: url(assets/fonts/text/ItauText_Bd.ttf),
+  url(assets/fonts/text/ItauText_W_Bd.eot),
+  url(assets/fonts/text/ItauText_W_Bd.woff),
+  url(assets/fonts/text/ItauText_W_Bd.woff2);
+}
+
+@font-face {
+  font-family: ItauTextLight;
+  src: url(assets/fonts/text/ItauText_Lt.ttf),
+  url(assets/fonts/text/ItauText_W_Lt.eot),
+  url(assets/fonts/text/ItauText_W_Lt.woff),
+  url(assets/fonts/text/ItauText_W_Lt.woff2);
+}
+
+@font-face {
+  font-family: ItauTextRg;
+  src: url(assets/fonts/text/ItauText_Rg.ttf),
+  url(assets/fonts/text/ItauText_W_Rg.eot),
+  url(assets/fonts/text/ItauText_W_Rg.woff),
+  url(assets/fonts/text/ItauText_W_Rg.woff2);
+}
+
+@font-face {
+  font-family: ItauTextXBold;
+  src: url(assets/fonts/text/ItauText_XBd.ttf),
+  url(assets/fonts/text/ItauText_W_XBd.eot),
+  url(assets/fonts/text/ItauText_W_XBd.woff),
+  url(assets/fonts/text/ItauText_W_XBd.woff2);
+}

@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { ComponentModules } from './modules/component.module';
 import { AppComponent } from './app.component';
 import { BackServiceService } from './services/back-service.service';
+import { ProductService } from './services/product.service';
+
 
 
 @NgModule({
@@ -13,7 +15,7 @@ import { BackServiceService } from './services/back-service.service';
     BrowserModule,
     ComponentModules
   ],
-  providers: [BackServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
