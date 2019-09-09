@@ -17,7 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material';
-
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -40,7 +40,8 @@ import { MatCheckboxModule } from '@angular/material';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -61,7 +62,8 @@ import { MatCheckboxModule } from '@angular/material';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ]
 })
 

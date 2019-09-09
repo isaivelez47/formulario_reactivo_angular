@@ -1,0 +1,128 @@
+.component-container {
+  padding: 24px;
+  font-family: ItauTextLight, Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 0 auto;
+
+
+  .section-form {
+    padding: 24px 0px;
+
+    form {
+      .form-control-input {
+        .label-input {
+          font-size: 14px;
+          line-height: 16px;
+          font-family: ItauTextRg;
+          color: rgb(96, 87, 81);
+        }
+
+        .value-input {
+          font-size: 24px;
+          line-height: 28px;
+          font-family: ItauTextLight;
+          color: rgb(37, 34, 32);
+          padding: 10px 0px 16px;
+          font-weight: 300;
+        }
+
+        .example-radio-group {
+          display: flex;
+          flex-direction: column;
+          margin: 10px 0;
+        }
+
+        .example-radio-button {
+          margin: 15px 0px 15px -8px;
+        }
+
+        .mat-radio-label-content {
+          padding-left: 30px !important;
+        }
+      }
+
+      .reactive-form-section {
+        .form-control-input {
+          padding-left: 8px;
+
+          .label-input {
+            font-size: 14px;
+            line-height: 21px;
+            font-family: ItauTextRg;
+            color: rgb(86, 80, 76);
+            margin: 20px 0px 0px;
+          }
+
+          .value-input {
+            font-size: 18px;
+            line-height: 28px;
+            font-family: ItauTextRg;
+            color: rgb(35, 29, 25);
+          }
+        }
+
+        .form-control-input.with-icon {
+          display: flex;
+          justify-content: space-between;
+
+          .value-input.transparent {
+            color: rgb(137, 131, 127);
+          }
+
+          .section-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-next {
+              width: 24px;
+              height: 24px;
+              background: url("./../../../assets/icons/arrow.svg");
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+
+        .form-control-input.with-icon:hover {
+          background: #eee;
+        }
+
+        .underline {
+          border-bottom: 1px solid rgb(239, 233, 229);
+        }
+      }
+
+      button.submit-button {
+        margin-top: 26px;
+        font-weight: bold;
+        line-height: 24px;
+        text-align: center;
+        width: 100%;
+        background: rgb(236, 112, 0);
+        border: 1px solid rgb(221, 97, 0);
+        padding: 12px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        transition: 200ms;
+        font-family: ItauTextBold;
+      }
+
+      button.submit-button:hover {
+        background: rgb(189, 94, 10);
+      }
+
+      button:disabled {
+        background: rgb(214, 208, 204) !important;
+        border: none;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(150, 146, 144);
+      }
+    }
+  }
+}

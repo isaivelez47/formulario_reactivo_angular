@@ -25,6 +25,10 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
 import { ItauButtonComponent } from '../components/itau-button/itau-button.component';
 import { CdtComponent } from './../pages/cdt/cdt.component';
 import { ProductService } from '../services/product.service';
+import { StepTwoComponent } from '../pages/step-two/step-two.component';
+import { FormStatusService } from '../services/form-status.service';
+import { CurrencyFormat } from '../pipes/currencyFormat.pipe';
+import { ReplacePipe } from '../pipes/replace.pipe';
 
 
 
@@ -43,12 +47,15 @@ import { ProductService } from '../services/product.service';
     FormComponent,
     ResultsComponent,
     UdpCurrencyMaskPipe,
+    ReplacePipe,
+    CurrencyFormat,
     HomeComponent,
     ProductCardComponent,
     ItauButtonComponent,
-    CdtComponent
+    CdtComponent,
+    StepTwoComponent
   ],
-  providers: [BackServiceService, ProductService],
+  providers: [BackServiceService, ProductService, FormStatusService ],
   bootstrap: [AppComponent]
 })
 

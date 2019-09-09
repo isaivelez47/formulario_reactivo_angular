@@ -1,0 +1,66 @@
+<div class="component-container">
+  <div class="section-title">
+    <h1>apertura CDT virtual</h1>
+  </div>
+
+  <div class="section-form">
+    <form [formGroup]="cdtForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-control-input">
+        <p class="label-input">monto a invertir</p>
+        <p class="value-input">{{ cdtGlobalForm.price | currencyFormat }}</p>
+      </div>
+      <div class="form-control-input">
+        <p class="label-input">tasa efectiva anual</p>
+        <p class="value-input">{{ cdtGlobalForm.rate | replace:'.':',' }}</p>
+      </div>
+      <div class="reactive-form-section">
+        <div class="form-control-input with-icon underline" (click)="openAccountsPage()">
+          <div class="section-text">
+            <p class="label-input">cuenta de origen de los fondos</p>
+            <p class="value-input transparent">selecciona una cuenta</p>
+          </div>
+          <div class="section-icon">
+            <i class="icon-next">
+            </i>
+          </div>
+        </div>
+        <div class="form-control-input underline">
+          <p class="label-input">formas de pagos de intereses</p>
+          <p class="value-input">{{ cdtForm.get('way_pay').value }}</p>
+        </div>
+        <div class="form-control-input">
+          <p class="label-input">frecuencia de pagos de interés</p>
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            formControlName="frecuency_pay">
+            <mat-radio-button color="primary" class="example-radio-button" *ngFor="let frecuency of frecuencies"
+              [value]="frecuency">
+              {{frecuency}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="form-control-input">
+          <p class="label-input">al vencer tu CDT el capital se debe</p>
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            formControlName="expiration_way">
+            <mat-radio-button color="primary" class="example-radio-button" *ngFor="let destination of destinations"
+              [value]="destination">
+              {{destination}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="form-control-input with-icon underline" (click)="openAccountsPage()" *ngIf="cdtForm.get('expiration_way').value == 'abonar a tu cuenta'">
+          <div class="section-text">
+            <p class="label-input">cuenta de destino al vencimiento</p>
+            <p class="value-input transparent">seleccionar</p>
+          </div>
+          <div class="section-icon">
+            <i class="icon-next">
+            </i>
+          </div>
+        </div>
+      </div>
+      <button class="submit-button" type="submit" [disabled]="cdtForm.invalid">continuar</button>
+    </form>
+  </div>
+</div>
