@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -34,9 +35,14 @@ export class ThreeStepComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  goHome() {
+    this.router.navigate(['/home']);
   }
 
 }

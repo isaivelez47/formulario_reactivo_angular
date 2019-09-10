@@ -26,7 +26,7 @@ export class ProductService {
       text: 'alcanza tus metas a mediano y largo plazo con abonos periódicos desde tu cuenta transaccional.',
       buttonText: 'conocer más',
       routeUrl: 'mejora-tus-ingresos',
-      urlImagen: './../../../assets/images/ahorro-programado.jpg'
+      urlImagen: './../../../assets/images/Ahorro-programado.jpg'
     },
     {
       title: 'CDT virtual',
@@ -34,7 +34,7 @@ export class ProductService {
       text: 'invierte a palzo y tasa fija a través de nuestros canales virtuales.',
       buttonText: 'conocer más',
       routeUrl: 'cdt-virtual',
-      urlImagen: './../../../assets/images/ahorro-e-inversion.png'
+      urlImagen: './../../../assets/images/Ahorro-e-inversion.png'
     }
   ];
 }
