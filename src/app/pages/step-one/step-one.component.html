@@ -1,35 +1,34 @@
 <div class="component-container animated fadeInRight">
-    <div class="section-title">
-      <h1>apertura CDT virtual</h1>
-    </div>
-    <div class="section-form">
-      <form>
-        <div class="reactive-form-section">
-          <div class="form-control-input with-icon underline">
-            <div class="section-text">
-              <p class="label-input">monto a invertir</p>
-              <input type="number" min="200000" max="800000000" placeholder="$200.000 - $800.000.000">
-            </div>
-          </div>
-        </div>
-
-        <div class="reactive-form-section">
-          <div class="form-control-input with-icon underline" (click)="onClick()">
-            <div class="section-text" >
-              <p class="label-input">plazo</p>
-              <p class="value-input transparent">
-                  selecciona una opción
-                  </p>
-            </div>
-            <div class="section-icon">
-              <i class="icon-next">
-              </i>
-            </div>
-          </div>
-        </div>
-        <button class="submit-button" style="margin-top: 50%" type="submit"
-          (click)="onSubmit()">continuar</button>
-      </form>
-    </div>
+  <div class="section-title">
+    <h1>apertura CDT virtual</h1>
   </div>
+  <div class="section-form">
+    <form>
+      <div class="reactive-form-section">
+        <div class="form-control-input with-icon underline">
+          <div class="section-text">
+            <p class="label-input">monto a invertir</p>
+            <input type="number" min="200000" max="800000000" placeholder="$200.000 - $800.000.000">
+          </div>
+        </div>
+      </div>
 
+      <div class="reactive-form-section">
+        <div class="form-control-input with-icon underline" (click)="onClick()">
+          <div class="section-text">
+            <p class="label-input">plazo</p>
+            <p class="value-input transparent">
+              selecciona una opción
+            </p>
+            {{ plazo.term }}
+          </div>
+          <div class="section-icon">
+            <i class="icon-next">
+            </i>
+          </div>
+        </div>
+      </div>
+      <button class="submit-button" style="margin-top: 50%" type="submit" (click)="onSubmit()">continuar</button>
+    </form>
+  </div>
+</div>
