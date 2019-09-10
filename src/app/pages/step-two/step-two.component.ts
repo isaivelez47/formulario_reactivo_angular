@@ -79,6 +79,8 @@ export class StepTwoComponent implements OnInit {
         default:
           // code block
       }
+
+      this._formService.setExpirationWay(newExpiration);
     })
   }
 

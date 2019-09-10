@@ -17,7 +17,7 @@ export class FormStatusService {
       way_pay: 'abonar a tu cuenta',
       frecuency_pay: null,
       expiration_way: null,
-      destination_account: null
+      destination_account: '7777'
     }
   }
 
