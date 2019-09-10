@@ -12,10 +12,6 @@ import { AccountsComponent } from './pages/accounts/accounts.component';
 const routes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path:'home', component: HomeComponent },
-  { path:'cdt-virtual', component: CdtComponent },
-  { path: 'form', component: StepTwoComponent },
-  { path: 'step', component: ThreeStepComponent },
   { path: 'home', component: HomeComponent },
   { path: 'cdt-virtual', component: CdtComponent },
   { path: 'step-one', component: StepOneComponent },
