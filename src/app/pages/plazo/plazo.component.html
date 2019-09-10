@@ -1,6 +1,8 @@
-<div class="component-container">
-  <ul style="list-style:none;">
-    <li *ngFor="let plazo of plazos">
+<div class="component-container animated fadeInRight ">
+  <ul style="list-style:none; margin-top: 15%">
+    <li *ngFor="let plazo of plazos" 
+        [routerLink]="['/step-one']" 
+        style="font-size: 16pt;font-weight: bolder; margin-bottom: 25%">
       {{plazo}} días
     </li>
   </ul>
