@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 // Todos los componentes de deben importar desde ComponentModules
 import { ComponentModules } from './modules/component.module';
 import { AppComponent } from './app.component';
+import { StepOneComponent } from './pages/step-one/step-one.component';
+import { PlazoComponent } from './pages/plazo/plazo.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [StepOneComponent, PlazoComponent],
   imports: [
     BrowserModule,
     ComponentModules
