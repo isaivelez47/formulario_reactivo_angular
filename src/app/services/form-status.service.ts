@@ -25,6 +25,11 @@ export class FormStatusService {
     return this.formCDT;
   }
 
+  
+  setTerm(term: number) {
+    this.formCDT.term = term;
+  }
+
   setPrice(newPrice: number) {
     this.formCDT.price = newPrice;
   }

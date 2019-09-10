@@ -13,7 +13,6 @@ export class StepOneComponent implements OnInit {
 
   // tslint:disable-next-line:align
   rango = new FormControl('', [Validators.max(800000000), Validators.min(200000)]);
-
   ngOnInit() {
   }
 
