@@ -40,10 +40,10 @@ export class StepTwoComponent implements OnInit {
 
   initReactiveForm() {
     this.cdtForm = this._fb.group({
-      origin_account: ['123456789', Validators.required],
+      origin_account: ['1234', Validators.required],
       way_pay: [this._formService.getForm().way_pay, Validators.required],
-      frecuency_pay: ['90 días', Validators.required],
-      expiration_way: ['renovar', Validators.required],
+      frecuency_pay: ['', Validators.required],
+      expiration_way: ['', Validators.required],
       destination_account: ['']
     });
 

@@ -18,7 +18,10 @@
         <div class="form-control-input with-icon underline" (click)="openAccountsPage()">
           <div class="section-text">
             <p class="label-input">cuenta de origen de los fondos</p>
-            <p class="value-input transparent">selecciona una cuenta</p>
+            <p class="value-input" *ngIf="cdtForm.get('origin_account').value != '' else selectingOrigin">**** 1234</p>
+            <ng-template #selectingOrigin>
+              <p class="value-input transparent">selecciona una cuenta</p>
+            </ng-template>
           </div>
           <div class="section-icon">
             <i class="icon-next">
@@ -49,10 +52,14 @@
             </mat-radio-button>
           </mat-radio-group>
         </div>
-        <div class="form-control-input with-icon underline" (click)="openAccountsPage()" *ngIf="cdtForm.get('expiration_way').value == 'abonar a tu cuenta'">
+        <div class="form-control-input with-icon underline" (click)="openAccountsPage()"
+          *ngIf="cdtForm.get('expiration_way').value == 'abonar a tu cuenta'">
           <div class="section-text">
             <p class="label-input">cuenta de destino al vencimiento</p>
-            <p class="value-input transparent">seleccionar</p>
+            <p class="value-input" *ngIf="cdtForm.get('destination_account').value != '' else selectingDestination">**** {{ cdtForm.get('destination_account').value }}</p>
+            <ng-template #selectingDestination>
+                <p class="value-input transparent">seleccionar</p>
+            </ng-template>
           </div>
           <div class="section-icon">
             <i class="icon-next">

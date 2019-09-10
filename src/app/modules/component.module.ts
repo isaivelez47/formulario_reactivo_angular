@@ -30,8 +30,8 @@ import { FormStatusService } from '../services/form-status.service';
 import { CurrencyFormat } from '../pipes/currencyFormat.pipe';
 import { ReplacePipe } from '../pipes/replace.pipe';
 import { ThreeStepComponent } from '../pages/three-step/three-step.component';
-
-
+import { StepOneComponent } from '../pages/step-one/step-one.component';
+import { PlazoComponent } from '../pages/plazo/plazo.component';
 
 @NgModule({
   imports: [
@@ -54,8 +54,10 @@ import { ThreeStepComponent } from '../pages/three-step/three-step.component';
     ProductCardComponent,
     ItauButtonComponent,
     CdtComponent,
+    StepOneComponent,
     StepTwoComponent,
-    ThreeStepComponent
+    ThreeStepComponent,
+    PlazoComponent
   ],
   providers: [BackServiceService, ProductService, FormStatusService ],
   bootstrap: [AppComponent]

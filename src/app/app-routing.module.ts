@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'cdt-virtual', component: CdtComponent },
   { path: 'step-one', component: StepOneComponent },
   { path: 'step-two', component: StepTwoComponent },
-  { path: 'step-tree', component: ThreeStepComponent },
+  { path: 'step-three', component: ThreeStepComponent },
   { path: 'plazo', component: PlazoComponent }
 
 ];
