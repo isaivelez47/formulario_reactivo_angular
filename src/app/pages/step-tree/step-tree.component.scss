@@ -127,3 +127,21 @@
   }
 }
 
+
+.tableCDT {
+  margin: 0px;
+  width: 100%;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0px;
+}
+
+td.mat-cell:last-of-type {
+  text-align: right;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: rgb(189, 94, 10) !important;
+
+}

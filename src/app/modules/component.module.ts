@@ -29,6 +29,7 @@ import { StepTwoComponent } from '../pages/step-two/step-two.component';
 import { FormStatusService } from '../services/form-status.service';
 import { CurrencyFormat } from '../pipes/currencyFormat.pipe';
 import { ReplacePipe } from '../pipes/replace.pipe';
+import { StepTreeComponent } from '../pages/step-tree/step-tree.component';
 
 
 
@@ -53,7 +54,8 @@ import { ReplacePipe } from '../pipes/replace.pipe';
     ProductCardComponent,
     ItauButtonComponent,
     CdtComponent,
-    StepTwoComponent
+    StepTwoComponent,
+    StepTreeComponent
   ],
   providers: [BackServiceService, ProductService, FormStatusService ],
   bootstrap: [AppComponent]
