@@ -19,7 +19,6 @@ export class ItauButtonComponent implements OnInit {
   }
 
   handleClickRedirect() {
-    console.log(this.routeUrl);
     this.router.navigate([this.routeUrl]);
   }
 

@@ -11,8 +11,13 @@ export class CdtComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.options);
+    this.scrollToTop();
   }
+
+  scrollToTop() {
+    window.scroll(0, 0);
+  }
+
 
 }
 

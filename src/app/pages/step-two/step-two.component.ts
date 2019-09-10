@@ -28,6 +28,7 @@ export class StepTwoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.scrollToTop();
     this.getGlobalForm();
     this.initReactiveForm();
     this.loadFrecuencies();
@@ -35,9 +36,12 @@ export class StepTwoComponent implements OnInit {
     this.onChangeExpirationWay();
   }
 
+  scrollToTop() {
+    window.scroll(0, 0);
+  }
+
   getGlobalForm() {
     this.cdtGlobalForm = this._formService.getForm();
-    console.log(this.cdtGlobalForm.price);
   }
 
   initReactiveForm() {

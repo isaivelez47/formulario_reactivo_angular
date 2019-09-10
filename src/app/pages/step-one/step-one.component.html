@@ -3,13 +3,11 @@
     <h1>apertura CDT virtual</h1>
   </div>
   <div class="section-form">
-    <form>
+    <form [formGroup]="cdtForm" (ngSubmit)="onSubmit()">
       <div class="reactive-form-section">
-        <div class="form-control-input with-icon underline">
-          <div class="section-text">
-            <p class="label-input">monto a invertir</p>
-            <input type="number" min="200000" max="800000000" placeholder="$200.000 - $800.000.000">
-          </div>
+        <div class="form-control-input underline">
+          <p class="label-input">monto a invertir</p>
+          <input formControlName="price" type="text" min="200000" max="800000000" placeholder="$200.000 - $800.000.000">
         </div>
       </div>
 

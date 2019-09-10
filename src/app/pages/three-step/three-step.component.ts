@@ -38,8 +38,12 @@ export class ThreeStepComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.scrollToTop();
   }
 
+  scrollToTop() {
+    window.scroll(0, 0);
+  }
 
   goHome() {
     this.router.navigate(['/home']);

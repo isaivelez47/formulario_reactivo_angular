@@ -4,11 +4,21 @@
     max-width: 600px;
     min-width: 350px;
     margin: 0 auto;
-  
-  
+
+    .section-title {
+
+      h1 {
+        font-size: 24px;
+        line-height: 28px;
+        font-family: ItauTextRg, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: rgb(37, 34, 32);
+      }
+    }
+
     .section-form {
       padding: 24px 0px;
-  
+
       form {
         .form-control-input {
           .label-input {
@@ -17,7 +27,7 @@
             font-family: ItauTextRg;
             color: rgb(96, 87, 81);
           }
-  
+
           .value-input {
             font-size: 24px;
             line-height: 28px;
@@ -26,26 +36,26 @@
             padding: 10px 0px 16px;
             font-weight: 300;
           }
-  
+
           .example-radio-group {
             display: flex;
             flex-direction: column;
             margin: 10px 0;
           }
-  
+
           .example-radio-button {
             margin: 15px 0px 15px -8px;
           }
-  
+
           .mat-radio-label-content {
             padding-left: 30px !important;
           }
         }
-  
+
         .reactive-form-section {
           .form-control-input {
             padding-left: 8px;
-  
+
             .label-input {
               font-size: 14px;
               line-height: 21px;
@@ -53,7 +63,7 @@
               color: rgb(86, 80, 76);
               margin: 20px 0px 0px;
             }
-  
+
             .value-input {
               font-size: 18px;
               line-height: 28px;
@@ -61,20 +71,20 @@
               color: rgb(35, 29, 25);
             }
           }
-  
+
           .form-control-input.with-icon {
             display: flex;
             justify-content: space-between;
-  
+
             .value-input.transparent {
               color: rgb(137, 131, 127);
             }
-  
+
             .section-icon {
               display: flex;
               justify-content: center;
               align-items: center;
-  
+
               .icon-next {
                 width: 24px;
                 height: 24px;
@@ -85,16 +95,16 @@
               }
             }
           }
-  
+
           .form-control-input.with-icon:hover {
             background: #eee;
           }
-  
+
           .underline {
             border-bottom: 1px solid rgb(239, 233, 229);
           }
         }
-  
+
         button.submit-button {
           margin-top: 26px;
           font-weight: bold;
@@ -111,11 +121,11 @@
           transition: 200ms;
           font-family: ItauTextBold;
         }
-  
+
         button.submit-button:hover {
           background: rgb(189, 94, 10);
         }
-  
+
         button:disabled {
           background: rgb(214, 208, 204) !important;
           border: none;
@@ -126,13 +136,13 @@
       }
     }
   }
-  
+
 input{
     border: none;
     height: 40px;
     width: 355px;
     margin-left: -3%;
-}  
+}
 
 
 .component-container[_ngcontent-wkr-c1] .section-form[_ngcontent-wkr-c1] form[_ngcontent-wkr-c1] .reactive-form-section[_ngcontent-wkr-c1] .form-control-input.with-icon[_ngcontent-wkr-c1]:hover {

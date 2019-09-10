@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormStatusService } from 'src/app/services/form-status.service';
 
 @Component({
   selector: 'app-step-one',
@@ -9,11 +10,25 @@ import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 })
 export class StepOneComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  cdtForm: FormGroup;
 
-  // tslint:disable-next-line:align
-  rango = new FormControl('', [Validators.max(800000000), Validators.min(200000)]);
+  constructor(
+    private router: Router,
+    private _formService: FormStatusService,
+    private _fb?: FormBuilder
+  ) { }
+
   ngOnInit() {
+    this.scrollToTop();
+    this.initReactiveForm();
+  }
+
+  initReactiveForm() {
+    this.cdtForm = this._fb.group({
+      price: [this._formService.getForm().price, Validators.required],
+      term: [this._formService.getForm().term, Validators.required]
+    });
+    console.log(this.cdtForm.value);
   }
 
   onClick() {
@@ -24,8 +39,8 @@ export class StepOneComponent implements OnInit {
     this.router.navigate(['step-two']);
   }
 
-  stepTwo(form: NgForm) {
-    console.log(form);
+  scrollToTop() {
+    window.scroll(0, 0);
   }
 
 }
