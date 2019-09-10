@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlazoComponent implements OnInit {
 
-  plazos: any[] = [ '90', '120', '180', '360' ];
+  public plazos: any[] = [ '90', '120', '180', '360' ];
 
   constructor() { }
 
