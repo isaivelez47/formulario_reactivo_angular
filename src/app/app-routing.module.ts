@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CdtComponent } from './pages/cdt/cdt.component';
 import { StepTwoComponent } from './pages/step-two/step-two.component';
-import { StepTreeComponent } from './pages/step-tree/step-tree.component';
+import { ThreeStepComponent } from './pages/three-step/three-step.component';
 
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path:'home', component: HomeComponent },
   { path:'cdt-virtual', component: CdtComponent },
   { path: 'form', component: StepTwoComponent },
-  { path: 'step', component: StepTreeComponent }
+  { path: 'step', component: ThreeStepComponent }
 
 ];
 
