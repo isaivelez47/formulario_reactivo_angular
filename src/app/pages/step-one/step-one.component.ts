@@ -17,4 +17,8 @@ export class StepOneComponent implements OnInit {
     this.router.navigateByUrl('/plazo');
   }
 
+  onSubmit() {
+    this.router.navigate(['step-two']);
+  }
+
 }

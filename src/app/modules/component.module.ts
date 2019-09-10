@@ -32,6 +32,8 @@ import { ReplacePipe } from '../pipes/replace.pipe';
 import { ThreeStepComponent } from '../pages/three-step/three-step.component';
 import { StepOneComponent } from '../pages/step-one/step-one.component';
 import { PlazoComponent } from '../pages/plazo/plazo.component';
+import { AccountsComponent } from '../pages/accounts/accounts.component';
+import { CurrencyFormatAccount } from '../pipes/currencyFormatAccount.pipe';
 
 @NgModule({
   imports: [
@@ -50,6 +52,7 @@ import { PlazoComponent } from '../pages/plazo/plazo.component';
     UdpCurrencyMaskPipe,
     ReplacePipe,
     CurrencyFormat,
+    CurrencyFormatAccount,
     HomeComponent,
     ProductCardComponent,
     ItauButtonComponent,
@@ -57,7 +60,8 @@ import { PlazoComponent } from '../pages/plazo/plazo.component';
     StepOneComponent,
     StepTwoComponent,
     ThreeStepComponent,
-    PlazoComponent
+    PlazoComponent,
+    AccountsComponent
   ],
   providers: [BackServiceService, ProductService, FormStatusService ],
   bootstrap: [AppComponent]

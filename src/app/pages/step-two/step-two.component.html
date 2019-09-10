@@ -1,4 +1,4 @@
-<div class="component-container">
+<div class="component-container animated fadeInRight">
   <div class="section-title">
     <h1>apertura CDT virtual</h1>
   </div>
@@ -18,7 +18,7 @@
         <div class="form-control-input with-icon underline" (click)="openAccountsPage()">
           <div class="section-text">
             <p class="label-input">cuenta de origen de los fondos</p>
-            <p class="value-input" *ngIf="cdtForm.get('origin_account').value != '' else selectingOrigin">**** 1234</p>
+            <p class="value-input" *ngIf="cdtForm.get('origin_account').value !== null else selectingOrigin">**** {{ cdtForm.get('origin_account').value }}</p>
             <ng-template #selectingOrigin>
               <p class="value-input transparent">selecciona una cuenta</p>
             </ng-template>
@@ -56,7 +56,7 @@
           *ngIf="cdtForm.get('expiration_way').value == 'abonar a tu cuenta'">
           <div class="section-text">
             <p class="label-input">cuenta de destino al vencimiento</p>
-            <p class="value-input" *ngIf="cdtForm.get('destination_account').value != '' else selectingDestination">**** {{ cdtForm.get('destination_account').value }}</p>
+            <p class="value-input" *ngIf="cdtForm.get('destination_account').value !== null else selectingDestination">**** {{ cdtForm.get('destination_account').value }}</p>
             <ng-template #selectingDestination>
                 <p class="value-input transparent">seleccionar</p>
             </ng-template>

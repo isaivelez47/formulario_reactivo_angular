@@ -1,0 +1,29 @@
+<div class="component-container animated fadeInRight">
+  <div class="section-title">
+    <h1>elige la cuenta de origen de los fondos</h1>
+  </div>
+  <div class="section-account-cards">
+    <div class="account underline" *ngFor="let account of accounts">
+      <div class="card" [ngClass]="{'disabled': account.salary === 0 }" (click)="selectAccount(account)">
+        <div class="salary-section">
+          <div class="text-salary">
+            <p>saldo:</p>
+          </div>
+          <div class="value-salary">
+            <p>{{ account.salary | currencyFormatAccount }}</p>
+          </div>
+        </div>
+        <div class="type-section">
+          <div class="text-type">
+            <p>{{ account.type }}</p>
+          </div>
+        </div>
+        <div class="number-section">
+          <div class="text-number">
+            <p>**** {{ account.number }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { StepTwoComponent } from './pages/step-two/step-two.component';
 import { ThreeStepComponent } from './pages/three-step/three-step.component';
 import { StepOneComponent } from './pages/step-one/step-one.component';
 import { PlazoComponent } from './pages/plazo/plazo.component';
+import { AccountsComponent } from './pages/accounts/accounts.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'step-one', component: StepOneComponent },
   { path: 'step-two', component: StepTwoComponent },
   { path: 'step-three', component: ThreeStepComponent },
-  { path: 'plazo', component: PlazoComponent }
+  { path: 'plazo', component: PlazoComponent },
+  { path: 'accounts', component: AccountsComponent }
 
 ];
 

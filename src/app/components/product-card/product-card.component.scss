@@ -6,7 +6,6 @@
   box-shadow: 0px 1px 1px 0px rgba(48, 43, 38, 0.24);
 
   .image-section {
-    background: rgb(84, 87, 84);
     height: 42.5vw;
     max-height: 255px;
     min-height: 148px;
@@ -16,6 +15,8 @@
     padding: 17px 18px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
 
     p {
       color: white;
